@@ -9,7 +9,7 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source: 
-    path: /apps/helm-dependency
+    path: apps/helm-dependency
     repoURL: "https://github.com/silandrew/22.git"
     targetRevision: master
     kustomize:
