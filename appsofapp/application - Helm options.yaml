@@ -1,9 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata: 
-  name: helm-app
-  annotations:
-    argocd.argoproj.io/depends-on: default/webapp
+  name: helm-app  
    #namespace: argocd
 spec: 
   destination: 
