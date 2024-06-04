@@ -3,7 +3,7 @@ kind: Application
 metadata: 
   name: webapp
   annotations:
-    argocd.argoproj.io/depends-on: default/webapp
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   destination:
     namespace: webapp
