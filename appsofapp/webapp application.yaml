@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  name: webapp
+  annotations:
+    argocd.argoproj.io/depends-on: default/webapp
+spec:
+  destination:
+    namespace: webapp
+    server: "https://kubernetes.default.svc"
+  project: default
+  source: 
+    path: helm/webapp
+    repoURL: "https://github.com/silandrew/argocd-course-webapp-config.git"
+    targetRevision: main
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+
+    
